@@ -30,9 +30,9 @@ namespace PoS
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             this.nombreTienda = new System.Windows.Forms.Label();
             this.hora_fecha = new System.Windows.Forms.Label();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
@@ -48,6 +48,9 @@ namespace PoS
             this.subt = new System.Windows.Forms.Label();
             this.eliminarB = new System.Windows.Forms.Button();
             this.pagarB = new System.Windows.Forms.Button();
+            this.txtpago = new System.Windows.Forms.TextBox();
+            this.pagoL = new System.Windows.Forms.Label();
+            this.empleadoL = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.cuadro_desc)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.logo)).BeginInit();
             this.SuspendLayout();
@@ -57,7 +60,7 @@ namespace PoS
             this.nombreTienda.AutoSize = true;
             this.nombreTienda.Font = new System.Drawing.Font("Times New Roman", 28.2F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point);
             this.nombreTienda.ForeColor = System.Drawing.Color.Blue;
-            this.nombreTienda.Location = new System.Drawing.Point(1007, 56);
+            this.nombreTienda.Location = new System.Drawing.Point(1006, 40);
             this.nombreTienda.Name = "nombreTienda";
             this.nombreTienda.Size = new System.Drawing.Size(377, 52);
             this.nombreTienda.TabIndex = 0;
@@ -89,15 +92,15 @@ namespace PoS
             this.cuadro_desc.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.cuadro_desc.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.DisplayedCells;
             this.cuadro_desc.BackgroundColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle4.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle4.Font = new System.Drawing.Font("Segoe UI", 27.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            dataGridViewCellStyle4.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle4.NullValue = null;
-            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.cuadro_desc.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle4;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Segoe UI", 27.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle1.NullValue = null;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.cuadro_desc.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             this.cuadro_desc.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.cuadro_desc.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.Column1,
@@ -106,14 +109,16 @@ namespace PoS
             this.Column4});
             this.cuadro_desc.Location = new System.Drawing.Point(27, 120);
             this.cuadro_desc.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.cuadro_desc.MultiSelect = false;
             this.cuadro_desc.Name = "cuadro_desc";
             this.cuadro_desc.ReadOnly = true;
             this.cuadro_desc.RowHeadersVisible = false;
             this.cuadro_desc.RowHeadersWidth = 51;
-            dataGridViewCellStyle6.Font = new System.Drawing.Font("Microsoft Sans Serif", 27.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            dataGridViewCellStyle6.NullValue = null;
-            this.cuadro_desc.RowsDefaultCellStyle = dataGridViewCellStyle6;
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 27.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            dataGridViewCellStyle3.NullValue = null;
+            this.cuadro_desc.RowsDefaultCellStyle = dataGridViewCellStyle3;
             this.cuadro_desc.RowTemplate.Height = 60;
+            this.cuadro_desc.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.cuadro_desc.Size = new System.Drawing.Size(838, 465);
             this.cuadro_desc.TabIndex = 3;
             // 
@@ -133,8 +138,8 @@ namespace PoS
             // 
             // Column3
             // 
-            dataGridViewCellStyle5.NullValue = null;
-            this.Column3.DefaultCellStyle = dataGridViewCellStyle5;
+            dataGridViewCellStyle2.NullValue = null;
+            this.Column3.DefaultCellStyle = dataGridViewCellStyle2;
             this.Column3.HeaderText = "Precio";
             this.Column3.MinimumWidth = 6;
             this.Column3.Name = "Column3";
@@ -172,9 +177,9 @@ namespace PoS
             // logo
             // 
             this.logo.Image = global::PoS.Properties.Resources.supermercado;
-            this.logo.Location = new System.Drawing.Point(916, 130);
+            this.logo.Location = new System.Drawing.Point(917, 131);
             this.logo.Name = "logo";
-            this.logo.Size = new System.Drawing.Size(524, 519);
+            this.logo.Size = new System.Drawing.Size(523, 519);
             this.logo.TabIndex = 6;
             this.logo.TabStop = false;
             // 
@@ -182,7 +187,7 @@ namespace PoS
             // 
             this.ivaL.AutoSize = true;
             this.ivaL.Font = new System.Drawing.Font("Segoe UI Semibold", 19.8F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point);
-            this.ivaL.Location = new System.Drawing.Point(943, 746);
+            this.ivaL.Location = new System.Drawing.Point(943, 747);
             this.ivaL.Name = "ivaL";
             this.ivaL.Size = new System.Drawing.Size(73, 45);
             this.ivaL.TabIndex = 7;
@@ -205,7 +210,7 @@ namespace PoS
             this.eliminarB.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.eliminarB.Location = new System.Drawing.Point(85, 640);
             this.eliminarB.Name = "eliminarB";
-            this.eliminarB.Size = new System.Drawing.Size(260, 71);
+            this.eliminarB.Size = new System.Drawing.Size(261, 71);
             this.eliminarB.TabIndex = 9;
             this.eliminarB.Text = "Eliminar";
             this.eliminarB.UseVisualStyleBackColor = false;
@@ -218,18 +223,53 @@ namespace PoS
             this.pagarB.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.pagarB.Location = new System.Drawing.Point(519, 640);
             this.pagarB.Name = "pagarB";
-            this.pagarB.Size = new System.Drawing.Size(260, 71);
+            this.pagarB.Size = new System.Drawing.Size(261, 71);
             this.pagarB.TabIndex = 10;
             this.pagarB.Text = "Pagar";
             this.pagarB.UseVisualStyleBackColor = false;
             this.pagarB.Click += new System.EventHandler(this.pagarB_Click);
+            // 
+            // txtpago
+            // 
+            this.txtpago.BackColor = System.Drawing.SystemColors.InactiveCaption;
+            this.txtpago.Font = new System.Drawing.Font("Segoe UI", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.txtpago.Location = new System.Drawing.Point(217, 715);
+            this.txtpago.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.txtpago.Name = "txtpago";
+            this.txtpago.Size = new System.Drawing.Size(180, 56);
+            this.txtpago.TabIndex = 4;
+            // 
+            // pagoL
+            // 
+            this.pagoL.AutoSize = true;
+            this.pagoL.Font = new System.Drawing.Font("Times New Roman", 18F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point);
+            this.pagoL.ForeColor = System.Drawing.Color.Blue;
+            this.pagoL.Location = new System.Drawing.Point(52, 729);
+            this.pagoL.Name = "pagoL";
+            this.pagoL.Size = new System.Drawing.Size(128, 35);
+            this.pagoL.TabIndex = 11;
+            this.pagoL.Text = "Pagó con";
+            // 
+            // empleadoL
+            // 
+            this.empleadoL.AutoSize = true;
+            this.empleadoL.Font = new System.Drawing.Font("Tahoma", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.empleadoL.ForeColor = System.Drawing.Color.Blue;
+            this.empleadoL.Location = new System.Drawing.Point(43, 9);
+            this.empleadoL.Name = "empleadoL";
+            this.empleadoL.Size = new System.Drawing.Size(111, 28);
+            this.empleadoL.TabIndex = 12;
+            this.empleadoL.Text = "Empleado";
             // 
             // PuntoDeVenta
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(1452, 860);
+            this.ClientSize = new System.Drawing.Size(1381, 788);
+            this.Controls.Add(this.empleadoL);
+            this.Controls.Add(this.pagoL);
+            this.Controls.Add(this.txtpago);
             this.Controls.Add(this.pagarB);
             this.Controls.Add(this.eliminarB);
             this.Controls.Add(this.subt);
@@ -271,5 +311,8 @@ namespace PoS
         private System.Windows.Forms.Label subt;
         private System.Windows.Forms.Button eliminarB;
         private System.Windows.Forms.Button pagarB;
+        private System.Windows.Forms.TextBox txtpago;
+        private System.Windows.Forms.Label pagoL;
+        private System.Windows.Forms.Label empleadoL;
     }
 }

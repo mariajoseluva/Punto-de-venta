@@ -216,7 +216,6 @@ C:\Users\maria\OneDrive\Documentos\UNISON\7mo. Semestre\API II\PoS\PoS\bin\Debug
 C:\Users\maria\OneDrive\Documentos\UNISON\7mo. Semestre\API II\PoS\PoS\bin\Debug\net5.0-windows\K4os.Hash.xxHash.dll
 C:\Users\maria\OneDrive\Documentos\UNISON\7mo. Semestre\API II\PoS\PoS\bin\Debug\net5.0-windows\MySql.Data.dll
 C:\Users\maria\OneDrive\Documentos\UNISON\7mo. Semestre\API II\PoS\PoS\bin\Debug\net5.0-windows\Ubiety.Dns.Core.dll
-C:\Users\maria\OneDrive\Documentos\UNISON\7mo. Semestre\API II\PoS\PoS\bin\Debug\net5.0-windows\Zstandard.Net.dll
 C:\Users\maria\OneDrive\Documentos\UNISON\7mo. Semestre\API II\PoS\PoS\obj\Debug\net5.0-windows\PoS.csproj.AssemblyReference.cache
 C:\Users\maria\OneDrive\Documentos\UNISON\7mo. Semestre\API II\PoS\PoS\obj\Debug\net5.0-windows\PoS.Form1.resources
 C:\Users\maria\OneDrive\Documentos\UNISON\7mo. Semestre\API II\PoS\PoS\obj\Debug\net5.0-windows\PoS.Properties.Resources.resources
@@ -231,3 +230,4 @@ C:\Users\maria\OneDrive\Documentos\UNISON\7mo. Semestre\API II\PoS\PoS\obj\Debug
 C:\Users\maria\OneDrive\Documentos\UNISON\7mo. Semestre\API II\PoS\PoS\obj\Debug\net5.0-windows\ref\PoS.dll
 C:\Users\maria\OneDrive\Documentos\UNISON\7mo. Semestre\API II\PoS\PoS\obj\Debug\net5.0-windows\PoS.pdb
 C:\Users\maria\OneDrive\Documentos\UNISON\7mo. Semestre\API II\PoS\PoS\obj\Debug\net5.0-windows\PoS.genruntimeconfig.cache
+C:\Users\maria\OneDrive\Documentos\UNISON\7mo. Semestre\API II\PoS\PoS\bin\Debug\net5.0-windows\ZstdNet.dll
